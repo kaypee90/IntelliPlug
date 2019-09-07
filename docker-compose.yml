@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    expose:
+      - "5432"
+    environment:
+      - POSTGRES_PASSWORD=REALLYGOOD
+      - POSTGRES_DB=intelliplug
+    networks:
+      - backend
+  web:
+    build: .
+    command: python3 manage.py runserver 0.0.0.0:8000
+    env_file: .env
+    volumes:
+      - .:/code
+    ports:
+      - '8070:8000'
+    expose:
+      - '8070'
+    links:
+      - db
+    networks:
+      - backend
+  rabbitmq:
+    image: rabbitmq
+    restart: always
+    ports:
+      - "5676:5672"
+    networks:
+      - backend
+  flower:  
+    image: mher/flower
+    environment:
+      - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672
+      - FLOWER_PORT=5555
+    ports:  
+      - 5555:5555
+    networks:
+      - backend
+networks:
+  backend:
+    driver: 'bridge'
