@@ -9,3 +9,4 @@ django-grappelli==2.13.1
 django-filter==2.1.0
 requests==2.22.0
 celery==4.3.0
+django-simple-history==2.7.3

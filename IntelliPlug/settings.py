@@ -115,6 +115,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'intelliroute',
     'django_filters',
+    'simple_history',
 ]
 
 MIDDLEWARE = [
@@ -126,6 +127,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'simple_history.middleware.HistoryRequestMiddleware',
 ]
 
 ROOT_URLCONF = 'IntelliPlug.urls'

@@ -1,5 +1,6 @@
 import uuid
 from django.db import models
+from simple_history.models import HistoricalRecords
 
 
 ACTIVE='A'
@@ -50,6 +51,7 @@ class RequestAudit(BaseModel):
     response_code = models.CharField(max_length=5, blank=True, null=True)
     integrating_app = models.ForeignKey(
         IntegratingApp, related_name='integrating_app', on_delete=models.PROTECT)
+    history = HistoricalRecords()
 
     def integrating_app__name(self):
         return u'{}'.format(self.integrating_app.name)
