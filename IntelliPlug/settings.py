@@ -116,6 +116,7 @@ INSTALLED_APPS = [
     'intelliroute',
     'django_filters',
     'simple_history',
+    'reversion',
 ]
 
 MIDDLEWARE = [
