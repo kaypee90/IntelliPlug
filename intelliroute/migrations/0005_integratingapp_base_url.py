@@ -8,14 +8,14 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('intelliroute', '0004_requestaudit_response_code'),
+        ("intelliroute", "0004_requestaudit_response_code"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='integratingapp',
-            name='base_url',
-            field=models.CharField(default='http://', max_length=100),
+            model_name="integratingapp",
+            name="base_url",
+            field=models.CharField(default="http://", max_length=100),
             preserve_default=False,
         ),
     ]

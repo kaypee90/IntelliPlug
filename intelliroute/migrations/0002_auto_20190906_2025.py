@@ -9,18 +9,22 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('intelliroute', '0001_initial'),
+        ("intelliroute", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='requestaudit',
-            name='http_method',
+            model_name="requestaudit",
+            name="http_method",
             field=models.CharField(max_length=5),
         ),
         migrations.AlterField(
-            model_name='requestaudit',
-            name='integrating_app',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='integrating_app', to='intelliroute.IntegratingApp'),
+            model_name="requestaudit",
+            name="integrating_app",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.PROTECT,
+                related_name="integrating_app",
+                to="intelliroute.IntegratingApp",
+            ),
         ),
     ]

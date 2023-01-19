@@ -8,13 +8,22 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('intelliroute', '0007_auto_20190907_0721'),
+        ("intelliroute", "0007_auto_20190907_0721"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='requestaudit',
-            name='http_method',
-            field=models.CharField(choices=[('GET', 'Get'), ('POST', 'Post'), ('PUT', 'Put'), ('DELETE', 'Delete'), ('PATCH', 'Patch')], max_length=6),
+            model_name="requestaudit",
+            name="http_method",
+            field=models.CharField(
+                choices=[
+                    ("GET", "Get"),
+                    ("POST", "Post"),
+                    ("PUT", "Put"),
+                    ("DELETE", "Delete"),
+                    ("PATCH", "Patch"),
+                ],
+                max_length=6,
+            ),
         ),
     ]

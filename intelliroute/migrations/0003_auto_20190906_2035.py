@@ -8,13 +8,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('intelliroute', '0002_auto_20190906_2025'),
+        ("intelliroute", "0002_auto_20190906_2025"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='integratingapp',
-            name='alias',
+            model_name="integratingapp",
+            name="alias",
             field=models.CharField(max_length=10, unique=True),
         ),
     ]
