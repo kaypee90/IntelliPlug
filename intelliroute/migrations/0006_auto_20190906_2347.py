@@ -8,13 +8,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('intelliroute', '0005_integratingapp_base_url'),
+        ("intelliroute", "0005_integratingapp_base_url"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='requestaudit',
-            name='response_time',
+            model_name="requestaudit",
+            name="response_time",
             field=models.DecimalField(decimal_places=8, max_digits=10),
         ),
     ]

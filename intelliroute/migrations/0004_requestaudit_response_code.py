@@ -8,13 +8,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('intelliroute', '0003_auto_20190906_2035'),
+        ("intelliroute", "0003_auto_20190906_2035"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='requestaudit',
-            name='response_code',
+            model_name="requestaudit",
+            name="response_code",
             field=models.CharField(blank=True, max_length=5, null=True),
         ),
     ]
